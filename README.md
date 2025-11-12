@@ -35,3 +35,12 @@ O sistema possui dois níveis de acesso:
 * **Back-End**: PHP, JavaScript
 * **Banco de Dados**: MySQL
 * **Front-End**: HTML5, CSS3
+
+---
+
+## 💡 Próximos Passos e Melhorias
+
+Este projeto foi focado na implementação da lógica de negócios (CRUD e Hierarquia de Usuários). Como próximos passos, planejo refatorar o código para implementar:
+
+* **Prepared Statements**: Para prevenir SQL Injection e tornar as queries mais seguras.
+* **Carrinho de Compras**: Para finalizar o fluxo de e-commerce.

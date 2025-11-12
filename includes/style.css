@@ -1,0 +1,577 @@
+@font-face {
+    font-family: playfair;
+    src: url(../fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background-color: var(--corFundo);
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  height: auto;  
+  overflow-x: hidden;
+  overflow-y: auto;   
+}
+
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border: none;     
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #c0a16b; 
+  border-radius: 10px; 
+  border: 2px solid #1a1a1a;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e0c490;
+}
+
+.menu{
+    background-color: var(--corFundo);
+    display: flex;
+    align-items: center;
+    height: 80px;
+    text-align: center;
+    justify-content: center;
+}
+.menu>a>img{
+    height: 100px;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    transition: 1.0s;
+}
+.menu>a>img:hover{
+    scale:105%;
+}
+.menu ul{
+    display: flex;
+    font-family: playfair;
+}
+.menu ul li a {
+    position: relative; /* Define o contexto para o pseudo-elemento ::after */
+    color: var(--corTexto);
+    padding: 5px; /* Adiciona um respiro para o sublinhado não ficar colado */
+    transition: color 0.3s ease;
+}
+.sair{
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    color: var(--corDourado);
+    font-size: 20px;
+}
+
+/* Pseudo-elemento para criar o sublinhado animado */
+.menu ul li ::after {
+    content: "";
+    position: absolute;
+    bottom: 0; /* Posição do sublinhado */
+    left: 0;
+    width: 0%; /* Começa com largura zero */
+    height: 2px; /* Espessura do sublinhado */
+    background-color: #C0A062;
+    transition: width 0.3s ease-in-out; /* Animação da largura */
+}
+
+/* Ativa a animação quando o mouse está sobre o link */
+.menu ul li :hover::after {
+    width: 100%; /* Aumenta a largura para 100% no hover */
+}
+
+/* Opcional: Mudar a cor do texto no hover */
+.menu ul li  :hover {
+    color: #C0A062;
+}
+
+#iconLogin{
+    right: 0;
+    top: 20px;
+    height: 50px;
+}
+#iconLogo{
+    left: 0;
+}
+
+.banner{
+    background-color: var(--corFundo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: auto;
+}
+.banner>video{
+   width: 70%;
+   height: auto;
+   border-radius: 2px;
+}
+.btnBanner{
+    position: absolute; /* Tira o botão do fluxo normal e o coloca sobre o container */
+    top: 75%; /* Distância do topo. Ajuste esse valor para subir ou descer o botão */
+    left: 60%; /* Centraliza horizontalmente */
+
+    font-family: playfair;
+
+    background-color: transparent; /* Fundo transparente */
+    border: 2px solid #C0A062; /* Borda dourada, como a do seu logo */
+    color: white; /* Cor do texto */
+    padding: 12px 24px; /* Espaçamento interno (vertical e horizontal) */
+    font-size: 20px; /* Tamanho da fonte */
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+    text-transform: uppercase; /* Deixa o texto em maiúsculas */
+    letter-spacing: 1px; /* Espaçamento entre as letras */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Animação suave para o efeito hover */
+}
+.btnBanner:hover {
+  background-color: #C0A062; /* Fundo dourado */
+  color: #000; /* Texto preto para contrastar */
+  transform: translateX(-20%) scale(1.05); /* Leve animação de crescimento */
+}
+.fragrancias{
+    height: auto;
+    background-color: var(--corFundo);
+    padding-top: 50px;
+}
+.fragrancias>h1{
+    text-align: center;
+    font-size: 70px;
+    font-family: playfair;
+    color: var(--corDourado);
+}
+
+.todo{
+    background-color: var(--corCinzaEscuro);
+    height: auto;
+    width: 100vw;
+    display: flex;
+}
+.todo>div>h1{
+    font-family: playfair;
+    font-size: 80px;
+    padding-top: 50px;
+    padding-right: 200px;
+    padding-left: 20px;
+    color: var(--corDourado);
+}
+.todo>div>img{
+    margin: 10px;
+    height: 500px;
+    margin-left: 15vw;
+}
+.formCad{
+    background-color: var(--corCinzaEscuro);
+    max-width: 600px;
+    height: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    margin-left: 20px;
+    border: 2px solid #c5a47e;
+    overflow-Y: hidden;
+}
+.formCad>h1{
+    color: var(--corDourado);
+    font-size: 60px;
+    margin: 10px;
+    margin-left: 60px;
+}
+.formCad>p{
+    color: var(--corTexto);
+    font-size: 20px;
+    font-family: playfair;
+}
+.formCad>input{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px; 
+    background-color: #333; 
+    border: 1px solid #555; 
+    border-radius: 4px; 
+    color: #fff; 
+    transition: all 0.3s ease;
+    outline: none;
+    font-size: 16px;
+}
+.formCad>input:focus {
+    border-color: var(--corDourado);
+    background: #1e1e1e;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+
+#categoria{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px; 
+    background-color: #333; 
+    border: 1px solid #555; 
+    border-radius: 4px; 
+    color: #fff;
+    outline: none; 
+    font-size: 16px;
+}
+#categoria:focus{
+    border-color: var(--corDourado);
+    background: #1e1e1e;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+
+#botao{
+    border: 2px solid var(--corDourado);
+    background-color: transparent;
+    color: var(--corDourado);
+    transition: 1.0s;
+}
+#botao:hover{
+    background-color: var(--corDourado);
+    color: var(--corTexto);
+}
+.container{
+    background-color: var(--corCinzaEscuro);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.formCategoria{
+    background-color: var(--corFundo);
+    width: 600px;
+    height: 400px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    border: 2px solid #c5a47e;
+    overflow-Y: hidden;
+}
+.formCategoria>h1{
+    color: var(--corDourado);
+    font-size: 60px;
+    margin: 10px;
+    margin-left: 60px;
+}
+.formCategoria>p{
+    margin-bottom: 10px;
+    color: var(--corTexto);
+    font-size: 20px;
+    font-family: playfair;
+}
+.formCategoria>input{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px; 
+    background-color: #333; 
+    border: 1px solid #555; 
+    border-radius: 4px; 
+    color: #fff; 
+    font-size: 16px;
+}
+.mensagemContainer{
+    text-align: center;
+    height: 50;
+    border-radius: 5px;
+    .msgErro{
+        padding: 10px;
+        background: rgba(244, 67, 54, 0.15);
+        border: 1px solid rgba(244, 67, 54, 0.4);
+        color: #ef5350;
+    }
+    .msgCorreto{
+        padding: 10px;
+        background: rgba(76, 175, 80, 0.15);
+        border: 1px solid rgba(76, 175, 80, 0.4);
+        color: #66bb6a;
+    }
+}
+
+
+
+#textArea{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px; 
+    background-color: #333; 
+    border: 1px solid #555; 
+    border-radius: 4px; 
+    color: #fff; 
+    font-size: 16px;
+    outline: none;
+}
+#textArea:focus{
+    border-color: var(--corDourado);
+    background: #1e1e1e;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+
+
+.formLogin{
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    width: 500px;
+    background-color: var(--corFundo);
+    align-items: center;
+    justify-content: center;
+}
+.formLogin>p{
+    color: var(--corTexto);
+}
+
+.formLogin>input{
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 20px; 
+    background-color: #333; 
+    border: 1px solid #555; 
+    border-radius: 4px; 
+    color: #fff; 
+    font-size: 16px;
+}
+.vidLogin{
+    height: 100vh;
+}
+
+.pesquisar{
+    flex-grow: 1; 
+    padding: 12px;
+    background: #333;
+    border: 2px solid #555;
+    border-radius: 8px; color: #fff;
+    font-size: 16px;
+    outline: none;
+}
+.pesquisar:focus{
+    border-color: var(--corDourado);
+    background: #1e1e1e;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+
+.btn-pesquisar{
+    height: 50px;
+    width: 100px;
+    border: 2px solid var(--corDourado);
+    background-color: var(--corFundo);
+    color: var(--corDourado);
+    border-radius: 5px;
+    transition: 1,5s ease-in-out;
+}
+.btn-pesquisar:hover{
+    background-color: var(--corDourado);
+    color: var(--corFundo);
+}
+
+.btn-deletar{
+    background: rgba(244, 67, 54, 0.15);
+    border: 1px solid rgba(244, 67, 54, 0.4);
+    color: #ef5350;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+.btn-deletar:hover{
+    scale: 103%;
+    background: rgba(230, 23, 8, 0.15);
+    border: 1px solid rgba(244, 67, 54, 0.4);
+    color: #ef5350;
+}
+
+.btn-alterar{
+    margin-top: 10px;
+    background: rgba(232, 185, 55, 0.15);
+    border: 1px solid rgba(247, 189, 0, 0.4);
+    color: #efbf50;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+.btn-alterar:hover{
+    scale: 103%;
+    background: rgba(249, 191, 32, 0.15);
+    border: 1px solid rgba(215, 165, 1, 0.4);
+    color: #efbf50;
+}
+ 
+
+.detalhe-container {
+    display: flex;
+    flex-wrap: wrap; 
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto; 
+    background-color: var(--corFundo);
+    color: var(--corTexto);
+    padding: 20px;
+}
+
+
+.detalhe-coluna-esquerda {
+    flex: 1; 
+    min-width: 300px;
+    padding: 20px;
+}
+
+
+.detalhe-coluna-direita {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.slider-css {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--corDourado); /* (Assumindo que você tem --corDourado) */
+    border-radius: 8px;
+}
+.slider-css input[name="slider"] {
+    display: none; /* Esconde os botões de rádio */
+}
+.slides {
+    display: flex;
+    width: 300%; 
+    transition: transform 0.6s ease-in-out;
+    flex-shrink: 0;
+}
+
+.slide {
+   width: 33.3333%;
+}
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* A mágica do slider (A PARTE MAIS IMPORTANTE) */
+#slide1:checked ~ .slides { transform: translateX(0%); }
+#slide2:checked ~ .slides { transform: translateX(-33.333%); }
+#slide3:checked ~ .slides { transform: translateX(-66.666%); }
+
+/* Navegação (bolinhas) */
+.slider-nav {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+.slider-nav label {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.slider-nav label:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+/* Bolinha ativa */
+#slide1:checked ~ .slider-nav label[for="slide1"],
+#slide2:checked ~ .slider-nav label[for="slide2"],
+#slide3:checked ~ .slider-nav label[for="slide3"] {
+    background: var(--corDourado); /* (Assumindo que você tem --corDourado) */
+}
+
+
+.detalhe-categoria {
+    font-size: 16px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.detalhe-nome-produto {
+    font-family: 'playfair', serif; 
+    font-size: 36px;
+    color: var(--corDourado);
+    margin: 10px 0;
+}
+
+.detalhe-descricao {
+    font-size: 16px;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.detalhe-preco-bloco {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.preco-antigo {
+    font-size: 20px;
+    color: #777;
+    text-decoration: line-through;
+}
+.preco-novo, .preco-normal {
+    font-size: 32px;
+    color: var(--corDourado);
+    font-weight: bold;
+}
+.tag-desconto {
+    background: var(--corDourado);
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.btn-comprar {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--corDourado) 0%, var(--cor-dourado-claro) 50%, var(--corDourado) 100%);
+    border: solid 3px var(--corDourado);
+    border-radius: 8px;
+    color: var(--corDourado);
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 15px var(--cor-sombra-dourada);
+}
+.btn-comprar:hover {
+    transform: translateY(-1px);
+    color: #000;
+    box-shadow: 0 8px 25px var(--cor-sombra-dourada);
+}
+
+
+:root{
+    --corFundo:#121212;
+    --corTexto:white;
+    --corDourado:#e2c073;
+    --corCinzaEscuro:#222831;
+}

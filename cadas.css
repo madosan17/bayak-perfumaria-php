@@ -1,0 +1,175 @@
+:root {
+   --cor-fundo-principal: #1a1a1a; 
+   --cor-secundaria: #0d0d0d; 
+   --cor-ouro: #c0a060; 
+   --cor-texto-claro: #f5f5f5; 
+}
+
+.fragrancias h1 {
+  font-size: 5em;
+  text-align: center;
+  color: var(--cor-ouro);
+  margin: 40px 0;
+  font-family: 'Times New Roman', serif; 
+}
+
+.lista-perfumes {
+     display: flex;
+     flex-wrap: wrap; 
+     justify-content: center; 
+     gap: 55px;  /*espaço entre cada um*/
+     padding: 20px;
+     max-width: 1500px; 
+     margin: 0 auto;
+}
+
+.perfume-card {
+    background-color: var(--cor-secundaria);
+    border: 1px solid rgba(192, 160, 96, 0.3); 
+    border-radius: 8px;
+    padding: 10px;
+    width: 220px;  /* Defina a largura para caberem vários na linha */
+    
+    height: 450px;
+    display: flex; 
+    flex-direction: column;
+    
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.perfume-card:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 8px 15px rgba(192, 160, 96, 0.2);
+}
+
+
+.perfume-card img {
+   max-width: 100%;
+   height: 180px; 
+   object-fit: contain;
+   margin-bottom: 10px;
+}
+
+
+.perfume-categoria {
+   font-size: 0.8em;
+   color: #a0a0a0;
+   margin-bottom: 2px;
+}
+
+.perfume-marca {
+   color: var(--cor-ouro);
+   font-size: 1.1em;
+   margin-bottom: 5px;
+}
+
+.perfume-nome {
+  font-size: 0.9em;
+  color: var(--cor-texto-claro);
+  height: 30px; 
+  overflow: hidden;
+  white-space: normal; 
+  margin-bottom: 5px;
+}
+
+.perfume-preco {
+   font-size: 1.3em;
+   color: var(--cor-ouro);
+   font-weight: bold;
+   margin: 10px 0;
+}
+
+.card-botoes { 
+   display: flex;
+    flex-direction: column; 
+    margin-top: auto; 
+    gap: 5px; 
+    width: 100%;
+}
+
+.btn-comprar {
+    display: block; 
+    width: 100%;
+    background-color: var(--cor-ouro);
+    color: var(--cor-ouro) !important;
+    padding: 8px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    text-align: center; 
+    margin-top: 5px;
+}
+
+.btn-comprar:hover {
+   background-color: #f7d598; 
+}
+
+.btn-apagar {
+   
+    display: block; 
+    width: 100%; 
+    background-color: #8B0000; 
+    color: var(--cor-texto-claro) !important; 
+    padding: 8px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+    margin-bottom: 5px;
+}
+
+.btn-apagar:hover {
+    background-color: #A52A2A
+}
+
+.msgErro { 
+    color: #ff6666;
+    background-color: #4d0000;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.msgSucesso {
+    color: #99ff99;
+    background-color: #004d00;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px auto;
+}
+.filtro-categoria {
+    text-align: center; 
+    margin-bottom: 20px; 
+    padding: 10px;
+    font-family: playfair;
+}
+
+.form-filtro select {
+    
+    font-family: playfair;
+    padding: 10px 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: 1px solid var(--cor-ouro); 
+    border-radius: 5px;
+    background-color: var(--cor-secundaria); 
+    color: var(--cor-texto-claro);
+    cursor: pointer;
+    
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+
+}
+
+.form-filtro select:focus {
+    border-color: #f7d598; 
+    outline: none;
+    box-shadow: 0 0 5px rgba(192, 160, 96, 0.5);
+}

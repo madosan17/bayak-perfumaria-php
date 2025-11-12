@@ -1,6 +1,6 @@
 # 🛒 E-commerce de perfumes Bayak
 
-![Screenshot da Home Page do Bayak](./screenshot-bayak.png)
+![Screenshot da Home Page do Bayak](./Screenshot.png)
 
 Este projeto é uma plataforma de e-commerce para a perfumaria "Bayak", construído do zero para demonstrar habilidades de desenvolvimento full-stack.
 
